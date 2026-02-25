@@ -1,0 +1,78 @@
+/* Theme-specific Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Fira+Code:wght@400&display=swap');
+
+/**
+ * Modern Business Theme
+ *
+ * A clean, professional theme designed for dashboards and business applications.
+ * Token overrides only - pair with design-system-base.css.
+ */
+
+:root {
+  /* Gradient Backgrounds - Professional Blue */
+  --gradient-primary: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  --gradient-primary-hover: linear-gradient(135deg, #1d4ed8 0%, #1e3a8a 100%);
+
+  /* Colors - Primary */
+  --color-primary: #2563eb;
+  --color-primary-light: #60a5fa;
+
+  /* Colors - Accents */
+  --color-purple: #7c3aed;
+  --color-pink: #db2777;
+  --color-orange: #ea580c;
+  --color-teal: #0d9488;
+  --color-blue: #2563eb;
+
+  /* Colors - Semantic */
+  --color-success: #059669;
+  --color-success-light: #34d399;
+  --color-danger: #dc2626;
+  --color-danger-light: #fca5a5;
+  --color-warning: #d97706;
+  --color-warning-light: #fbbf24;
+  --color-error-bg: #fef2f2;
+  --color-error-border: #fecaca;
+  --color-error-text: #991b1b;
+
+  /* Colors - Text */
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748b;
+  --color-heading: #020617;
+
+  /* Colors - Background */
+  --color-bg-body: #f8fafc;
+  --color-bg-surface: #ffffff;
+  --color-bg-hover: #f1f5f9;
+  --color-bg-item: #f8fafc;
+
+  /* Colors - Border */
+  --color-border-default: #cbd5e1;
+  --color-border-focus: #2563eb;
+
+  /* Typography */
+  --font-family-main: 'Inter', system-ui, sans-serif;
+  --font-family-heading: 'Manrope', system-ui, sans-serif;
+  --font-family-mono: 'Fira Code', monospace;
+  --font-family-base: var(--font-family-main);
+
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.1), 0 2px 4px -1px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -2px rgba(15, 23, 42, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.12), 0 10px 10px -5px rgba(15, 23, 42, 0.08);
+
+  /* Shadows - Colored */
+  --shadow-purple: 0 10px 25px -5px rgba(124, 58, 237, 0.35);
+  --shadow-pink: 0 10px 25px -5px rgba(219, 39, 119, 0.35);
+  --shadow-blue: 0 10px 25px -5px rgba(37, 99, 235, 0.35);
+  --shadow-teal: 0 10px 25px -5px rgba(13, 148, 136, 0.35);
+}

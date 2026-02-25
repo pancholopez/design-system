@@ -1,0 +1,444 @@
+/* Default/Fallback Fonts - only loaded as base fallback */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap');
+@import url('./reset.css');
+@import url('./base.css');
+@import url('./utilities.css');
+
+/**
+ * Design System Showcase Styles (Theme-Agnostic)
+ *
+ * Shared showcase/component styles and core imports.
+ * Pair with a theme token file such as theme-citrus.css.
+ * 
+ * Note: Only default fonts (Inter, JetBrains Mono) are imported here.
+ * Each theme CSS file imports its own specific fonts.
+ */
+
+/* Design System Specific Styles */
+    body {
+      font-family: var(--font-family-base);
+      color: var(--color-text-primary);
+      background: var(--gradient-primary);
+      padding: var(--spacing-8);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: var(--color-bg-surface);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-xl);
+      padding: var(--spacing-8);
+    }
+
+    /* Typography */
+    h1 {
+      font-size: var(--font-size-4xl);
+      font-weight: var(--font-weight-extrabold);
+      font-family: var(--font-family-heading);
+      color: var(--color-heading);
+      margin-bottom: var(--spacing-4);
+    }
+    
+    /* Gradient text effect - opt-in utility class */
+    .gradient-text {
+      background: var(--gradient-primary);
+      background-size: 100%;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+      background-clip: text;
+      display: inline-block;
+    }
+
+    h2 {
+      font-size: var(--font-size-3xl);
+      font-weight: var(--font-weight-bold);
+      font-family: var(--font-family-heading);
+      color: var(--color-heading);
+      margin-top: var(--spacing-12);
+      margin-bottom: var(--spacing-6);
+      padding-bottom: var(--spacing-4);
+      border-bottom: 3px solid transparent;
+      border-image: var(--gradient-primary) 1;
+    }
+
+    h3 {
+      font-size: var(--font-size-2xl);
+      font-weight: var(--font-weight-semibold);
+      font-family: var(--font-family-heading);
+      color: var(--color-heading);
+      margin-top: var(--spacing-8);
+      margin-bottom: var(--spacing-4);
+    }
+
+    p {
+      margin-bottom: var(--spacing-4);
+      color: var(--color-text-secondary);
+      font-size: var(--font-size-base);
+    }
+
+    code {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      padding: var(--spacing-1) var(--spacing-2);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-family-mono);
+      font-size: 0.9em;
+      color: var(--color-purple);
+      border: 1px solid var(--color-border-default);
+    }
+
+    /* Color Swatches */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: var(--spacing-6);
+      margin-bottom: var(--spacing-8);
+    }
+
+    .color-swatch {
+      border: 1px solid var(--color-border-default);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: all var(--transition-spring);
+    }
+
+    .color-swatch:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .color-sample {
+      height: 120px;
+      width: 100%;
+      transition: height var(--transition-spring);
+    }
+
+    .color-swatch:hover .color-sample {
+      height: 140px;
+    }
+
+    .color-info {
+      padding: var(--spacing-4);
+      background: var(--color-bg-surface);
+    }
+
+    .color-name {
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--spacing-1);
+      color: var(--color-heading);
+      font-size: var(--font-size-base);
+    }
+
+    .color-value {
+      font-size: var(--font-size-xs);
+      color: var(--color-text-secondary);
+      font-family: 'Courier New', monospace;
+      line-height: 1.8;
+    }
+
+    /* Typography Examples */
+    .type-example {
+      margin-bottom: var(--spacing-4);
+      padding: var(--spacing-6);
+      background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border-default);
+      transition: all var(--transition-spring);
+    }
+
+    .type-example:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateX(4px);
+    }
+
+    .type-label {
+      font-size: var(--font-size-xs);
+      color: var(--color-text-secondary);
+      font-family: 'Courier New', monospace;
+      margin-bottom: var(--spacing-2);
+      font-weight: var(--font-weight-medium);
+    }
+
+    /* Spacing Scale */
+    .spacing-grid {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-4);
+    }
+
+    .spacing-item {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-4);
+      padding: var(--spacing-3);
+      background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border-default);
+    }
+
+    .spacing-label {
+      min-width: 140px;
+      font-family: 'Courier New', monospace;
+      font-size: var(--font-size-sm);
+      color: var(--color-text-primary);
+      font-weight: var(--font-weight-medium);
+    }
+
+    .spacing-visual {
+      height: 32px;
+      background: var(--gradient-primary);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-purple);
+      transition: all var(--transition-spring);
+    }
+
+    .spacing-item:hover .spacing-visual {
+      transform: scaleX(1.1);
+    }
+
+    /* Component Examples */
+    .component-example {
+      padding: var(--spacing-8);
+      background: linear-gradient(135deg, #faf5ff 0%, #f3f4f6 100%);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--spacing-6);
+      border: 2px solid var(--color-border-default);
+    }
+
+    .example-title {
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--spacing-4);
+      color: var(--color-heading);
+      font-size: var(--font-size-lg);
+    }
+
+    /* Button Styles */
+    .btn {
+      padding: var(--spacing-3) var(--spacing-6);
+      border: none;
+      border-radius: var(--radius-lg);
+      font-size: var(--font-size-base);
+      font-weight: var(--font-weight-semibold);
+      cursor: pointer;
+      transition: all var(--transition-spring);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn-primary {
+      background: var(--gradient-primary);
+      color: white;
+      box-shadow: var(--shadow-purple);
+    }
+
+    .btn-primary:hover {
+      background: var(--gradient-primary-hover);
+      box-shadow: var(--shadow-purple);
+    }
+
+    .btn-danger {
+      background: linear-gradient(135deg, var(--color-danger) 0%, var(--color-danger-light) 100%);
+      color: white;
+      box-shadow: 0 10px 25px -5px rgba(239, 68, 68, 0.4);
+    }
+
+    .btn-danger:hover {
+      background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+    }
+
+    .btn-success {
+      background: linear-gradient(135deg, var(--color-success) 0%, var(--color-success-light) 100%);
+      color: white;
+      box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4);
+    }
+
+    .btn-accent-pink {
+      background: linear-gradient(135deg, var(--color-pink) 0%, #f472b6 100%);
+      color: white;
+      box-shadow: var(--shadow-pink);
+    }
+
+    .btn-accent-teal {
+      background: linear-gradient(135deg, var(--color-teal) 0%, #2dd4bf 100%);
+      color: white;
+      box-shadow: var(--shadow-teal);
+    }
+
+    .btn-accent-blue {
+      background: linear-gradient(135deg, var(--color-blue) 0%, #60a5fa 100%);
+      color: white;
+      box-shadow: var(--shadow-blue);
+    }
+
+    /* Input Styles */
+    .input {
+      padding: var(--spacing-3) var(--spacing-4);
+      border: 2px solid var(--color-border-default);
+      border-radius: var(--radius-lg);
+      font-size: var(--font-size-base);
+      font-family: var(--font-family-base);
+      transition: all var(--transition-spring);
+      width: 100%;
+      max-width: 400px;
+      background: white;
+    }
+
+    .input:focus {
+      outline: none;
+      border-color: var(--color-border-focus);
+      box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+      transform: translateY(-1px);
+    }
+
+    /* Form Group */
+    .form-group {
+      margin-bottom: var(--spacing-4);
+    }
+
+    .form-label {
+      display: block;
+      margin-bottom: var(--spacing-2);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-heading);
+      font-size: var(--font-size-base);
+    }
+
+    /* Card */
+    .card {
+      background: var(--color-bg-surface);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-6);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--color-border-default);
+    }
+
+    .card-hover {
+      transition: all var(--transition-spring);
+    }
+
+    .card-hover:hover {
+      background: var(--color-bg-hover);
+      box-shadow: var(--shadow-xl);
+      transform: translateY(-4px);
+    }
+
+    /* Gradient Card */
+    .card-gradient {
+      background: var(--gradient-primary);
+      color: white;
+      border: none;
+    }
+
+    .card-gradient h3,
+    .card-gradient p {
+      color: white;
+    }
+
+    /* Error Message */
+    .error-message {
+      background: linear-gradient(135deg, var(--color-error-bg) 0%, #fef2f2 100%);
+      border: 2px solid var(--color-error-border);
+      color: var(--color-error-text);
+      padding: var(--spacing-4) var(--spacing-6);
+      border-radius: var(--radius-lg);
+      font-weight: var(--font-weight-medium);
+    }
+
+    /* Success Message */
+    .success-message {
+      background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+      border: 2px solid var(--color-success-light);
+      color: #065f46;
+      padding: var(--spacing-4) var(--spacing-6);
+      border-radius: var(--radius-lg);
+      font-weight: var(--font-weight-medium);
+    }
+
+    /* Warning Message */
+    .warning-message {
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      border: 2px solid var(--color-warning-light);
+      color: #78350f;
+      padding: var(--spacing-4) var(--spacing-6);
+      border-radius: var(--radius-lg);
+      font-weight: var(--font-weight-medium);
+    }
+
+    /* Utilities */
+    .flex-gap {
+      display: flex;
+      gap: var(--spacing-4);
+      flex-wrap: wrap;
+    }
+
+    .mb-lg {
+      margin-bottom: var(--spacing-6);
+    }
+
+    /* Animation Examples */
+    .animation-box {
+      width: 80px;
+      height: 80px;
+      background: var(--gradient-primary);
+      border-radius: var(--radius-lg);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: var(--font-weight-bold);
+      box-shadow: var(--shadow-purple);
+    }
+
+    .spring-bounce {
+      animation: bounce 2s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+    }
+
+    .spring-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    .spring-wiggle {
+      animation: wiggle 1s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.05); }
+    }
+
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(-10deg); }
+      75% { transform: rotate(10deg); }
+    }
+
+    /* Shadow Examples */
+    .shadow-box {
+      width: 120px;
+      height: 120px;
+      background: white;
+      border-radius: var(--radius-lg);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-text-primary);
+      text-align: center;
+      font-size: var(--font-size-sm);
+    }

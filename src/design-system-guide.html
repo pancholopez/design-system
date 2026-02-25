@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System Guide - Documentation</title>
+  <link rel="stylesheet" href="design-system.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Design System Guide</h1>
+    <p>Comprehensive documentation on CSS architecture, theming, and best practices for using the design system.</p>
+    
+    <div style="margin-bottom: var(--spacing-8); padding: var(--spacing-4); background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: var(--radius-lg); border: 2px solid var(--color-blue);">
+      <strong>📖 Quick Links:</strong>
+      <ul style="margin-top: var(--spacing-2); padding-left: var(--spacing-6);">
+        <li><a href="index.html">← Back to Home</a></li>
+        <li><a href="vibrant.html">View Vibrant Theme Showcase →</a></li>
+        <li><a href="modern-business.html">View Modern Business Theme Showcase →</a></li>
+      </ul>
+    </div>
+
+    <!-- CSS Architecture Section -->
+    <h2>CSS Architecture</h2>
+    <p>Our design system uses a layered CSS architecture optimized for theming, maintainability, and scalability.</p>
+
+    <h3>Token Architecture: Theme-Specific vs Theme-Agnostic</h3>
+    <div class="component-example" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-color: var(--color-blue);">
+      <div class="example-title" style="color: #075985;">🎨 Understanding Token Separation</div>
+      <p style="color: #075985; margin-bottom: var(--spacing-4);">Design tokens are split into two categories to enable easy theme creation:</p>
+      
+      <div style="display: grid; gap: var(--spacing-4); margin-bottom: var(--spacing-4);">
+        <div style="background: white; padding: var(--spacing-6); border-radius: var(--radius-lg); border: 2px solid var(--color-blue);">
+          <h4 style="margin-bottom: var(--spacing-3); font-size: var(--font-size-lg); font-family: var(--font-family-heading); color: var(--color-blue);">Theme-Agnostic Tokens (base.css)</h4>
+          <p style="font-size: var(--font-size-sm); margin-bottom: var(--spacing-3); color: var(--color-text-secondary);">These remain constant across all themes. They define structural consistency.</p>
+          <ul style="list-style: none; padding: 0; display: grid; gap: var(--spacing-2);">
+            <li>📐 Typography scale (--font-base-size, --font-scale, computed sizes)</li>
+            <li>📐 Spacing (4pt grid: --spacing-1 through --spacing-16)</li>
+            <li>📐 Border radius (--radius-sm through --radius-full)</li>
+            <li>📐 Line height (--line-height-base)</li>
+            <li>📐 Transitions (--transition-fast, --transition-spring)</li>
+          </ul>
+        </div>
+        
+        <div style="background: white; padding: var(--spacing-6); border-radius: var(--radius-lg); border: 2px solid var(--color-purple);">
+          <h4 style="margin-bottom: var(--spacing-3); font-size: var(--font-size-lg); font-family: var(--font-family-heading); color: var(--color-purple);">Theme-Specific Tokens (design-system.css)</h4>
+          <p style="font-size: var(--font-size-sm); margin-bottom: var(--spacing-3); color: var(--color-text-secondary);">These change when switching themes. They define visual identity.</p>
+          <ul style="list-style: none; padding: 0; display: grid; gap: var(--spacing-2);">
+            <li>🎨 Colors (all: --color-primary, accents, semantic, text, bg, border)</li>
+            <li>🎨 Font families (--font-family-main, --font-family-heading, --font-family-mono)</li>
+            <li>🎨 Font weights (--font-weight-* - varies with font family)</li>
+            <li>🎨 Shadows (--shadow-* - may need dark theme adjustments)</li>
+            <li>🎨 Gradients (--gradient-primary, etc.)</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div style="background: white; padding: var(--spacing-6); border-radius: var(--radius-lg); border: 2px dashed var(--color-success);">
+        <h4 style="margin-bottom: var(--spacing-3); font-size: var(--font-size-lg); font-family: var(--font-family-heading); color: var(--color-success);">✨ Creating New Themes is Easy!</h4>
+        <p style="margin-bottom: var(--spacing-3);">To create a new theme, you only need to:</p>
+        <ol style="padding-left: var(--spacing-6); display: grid; gap: var(--spacing-2); color: var(--color-text-secondary);">
+          <li>Copy theme-specific variables from <code>design-system.css</code></li>
+          <li>Modify colors, fonts, and shadows to match your new theme</li>
+          <li>Save as <code>theme-dark.css</code> (or any name)</li>
+          <li>Swap the import: <code>@import './theme-dark.css'</code></li>
+        </ol>
+        <p style="margin-top: var(--spacing-3); margin-bottom: 0; color: var(--color-text-secondary); font-size: var(--font-size-sm);">Current examples include <code>design-system.css</code> (legacy), <code>theme-vibrant.css</code>, <code>theme-citrus.css</code>, and <code>theme-business.css</code>.</p>
+        <div style="margin-top: var(--spacing-4); padding: var(--spacing-3); background: #f0fdf4; border-left: 3px solid var(--color-success); border-radius: var(--radius-sm); font-size: var(--font-size-sm);">
+          <strong>Pro Tip:</strong> All structural tokens (spacing, typography scale, radius) automatically work with your new theme!
+        </div>
+      </div>
+    </div>
+
+    <h3>Layer 1: Reset (Browser Normalization)</h3>
+    <div class="component-example">
+      <div class="example-title">Purpose: Fix browser inconsistencies without opinions</div>
+      <p style="margin-bottom: var(--spacing-4);">The reset layer ensures consistent rendering across all browsers by normalizing default styles.</p>
+      
+      <div style="background: white; padding: var(--spacing-6); border-radius: var(--radius-lg); border: 1px solid var(--color-border-default);">
+        <h4 style="margin-bottom: var(--spacing-3); font-size: var(--font-size-lg); font-family: var(--font-family-heading);">What's Included:</h4>
+        <ul style="list-style: none; padding: 0; display: grid; gap: var(--spacing-2);">
+          <li>✅ Box-sizing: border-box inheritance</li>
+          <li>✅ Margin and padding normalization</li>
+          <li>✅ Media elements (img, video, svg) with max-width: 100%</li>
+          <li>✅ Form control font inheritance</li>
+          <li>✅ Modern text-wrap (balance for headings, pretty for paragraphs)</li>
+          <li>✅ Text-size-adjust: 100% (prevents mobile font inflation)</li>
+          <li>✅ Reduced motion preferences support</li>
+          <li>✅ Isolation for stacking context (#root)</li>
+        </ul>
+      </div>
+      <br>
+      <code>@import url('./reset.css');</code>
+    </div>
+
+    <h3>Layer 2: Base Styles (Structural Tokens + Global Design)</h3>
+    <div class="component-example">
+      <div class="example-title">Purpose: Theme-agnostic tokens + global design choices</div>
+      <p style="margin-bottom: var(--spacing-4);">Base styles contain structural design tokens AND global styling for all elements.</p>
+      
+      <div style="background: white; padding: var(--spacing-6); border-radius: var(--radius-lg); border: 1px solid var(--color-border-default);">
+        <h4 style="margin-bottom: var(--spacing-3); font-size: var(--font-size-lg); font-family: var(--font-family-heading);">What's Included:</h4>
+        <ul style="list-style: none; padding: 0; display: grid; gap: var(--spacing-2);">
+          <li>📐 Structural tokens (spacing, typography scale, border radius, transitions)</li>
+          <li>🎨 Heading typography (font-family, weight, line-height, text-wrap)</li>
+          <li>🎨 Link colors and hover states</li>
+          <li>🎨 Typography refinements (text-wrap: pretty for lists)</li>
+          <li>🎨 Focus styles for accessibility</li>
+        </ul>
+        
+        <div style="margin-top: var(--spacing-4); padding: var(--spacing-4); background: linear-gradient(135deg, #faf5ff 0%, #f3f4f6 100%); border-radius: var(--radius-md);">
+          <strong>Accessibility Note:</strong> Link underlines are kept on hover to maintain affordance. Removing underlines can harm user experience and violate WCAG guidelines.
+        </div>
+      </div>
+      <br>
+      <code>@import url('./base.css');</code>
+    </div>
+
+    <h3>Layer 3: Theme Tokens (Colors, Fonts, Shadows)</h3>
+    <div class="component-example" style="background: linear-gradient(135deg, #fdf4ff 0%, #fae8ff 100%); border-color: var(--color-purple);">
+      <div class="example-title" style="color: #6b21a8;">Purpose: Theme-specific visual identity</div>
+      <p style="color: #6b21a8; margin-bottom: var(--spacing-4);">This layer contains ONLY variables that change between themes - making theme creation effortless.</p>
+      
+      <div style="background: white; padding: var(--spacing-6); border-radius: var(--radius-lg); border: 1px solid var(--color-border-default);">
+        <h4 style="margin-bottom: var(--spacing-3); font-size: var(--font-size-lg); font-family: var(--font-family-heading);">What's Included:</h4>
+        <ul style="list-style: none; padding: 0; display: grid; gap: var(--spacing-2);">
+          <li>🎨 All color tokens (primary, accents, semantic, text, background, border)</li>
+          <li>🎨 Font family declarations</li>
+          <li>🎨 Font weight mappings</li>
+          <li>🎨 Shadow definitions (standard + colored)</li>
+          <li>🎨 Gradient backgrounds</li>
+        </ul>
+      </div>
+      <br>
+      <code>@import url('./design-system.css');</code>
+    </div>
+
+    <h3>Layer 4: Utilities (Opt-In Classes)</h3>
+    <div class="component-example">
+      <div class="example-title">Purpose: Single-purpose helper classes</div>
+      <p style="margin-bottom: var(--spacing-4);">Utilities are tools you apply when needed, not global defaults. They solve specific problems without affecting other elements.</p>
+      
+      <div style="background: white; padding: var(--spacing-6); border-radius: var(--radius-lg); border: 1px solid var(--color-border-default); margin-bottom: var(--spacing-4);">
+        <h4 style="margin-bottom: var(--spacing-3); font-size: var(--font-size-lg); font-family: var(--font-family-heading);">Available Utilities:</h4>
+        
+        <div style="display: grid; gap: var(--spacing-4);">
+          <div style="padding: var(--spacing-3); background: #f0fdf4; border-left: 3px solid var(--color-success); border-radius: var(--radius-sm);">
+            <div style="font-weight: var(--font-weight-semibold); margin-bottom: var(--spacing-1);"><code>.sr-only</code></div>
+            <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">Screen reader only - Hides content visually but keeps it accessible to assistive technology</div>
+          </div>
+          
+          <div style="padding: var(--spacing-3); background: #eff6ff; border-left: 3px solid var(--color-blue); border-radius: var(--radius-sm);">
+            <div style="font-weight: var(--font-weight-semibold); margin-bottom: var(--spacing-1);"><code>.mono</code></div>
+            <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">Monospace font - Apply <span class="mono">var(--font-family-mono)</span> to any element</div>
+          </div>
+        </div>
+      </div>
+      
+      <div style="background: white; padding: var(--spacing-6); border-radius: var(--radius-lg); border: 1px solid var(--color-border-default);">
+        <h4 style="margin-bottom: var(--spacing-3); font-size: var(--font-size-lg); font-family: var(--font-family-heading);">Example Usage:</h4>
+        <pre style="background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%); padding: var(--spacing-4); border-radius: var(--radius-md); overflow-x: auto; border: 1px solid var(--color-border-default); font-family: var(--font-family-mono); font-size: var(--font-size-sm);"><code>&lt;!-- Screen reader only content --&gt;
+&lt;span class="sr-only"&gt;Skip to main content&lt;/span&gt;
+
+&lt;!-- Monospace text --&gt;
+&lt;code class="mono"&gt;npm install react&lt;/code&gt;</code></pre>
+      </div>
+      <br>
+      <code>@import url('./utilities.css');</code>
+    </div>
+
+    <h3>Import Order Matters</h3>
+    <div class="component-example" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-color: var(--color-warning);">
+      <div class="example-title" style="color: #78350f;">⚠️ Critical: CSS Cascade Order</div>
+      <p style="color: #78350f; margin-bottom: var(--spacing-4);">Always import in this order for proper CSS specificity and cascade:</p>
+      
+      <pre style="background: white; padding: var(--spacing-4); border-radius: var(--radius-md); overflow-x: auto; border: 1px solid var(--color-warning); font-family: var(--font-family-mono); font-size: var(--font-size-sm);"><code>1. @import url('./reset.css');         /* Browser normalization */
+2. @import url('./base.css');          /* Structural tokens + global styles */
+3. @import url('./design-system.css'); /* Theme-specific tokens (colors, fonts) */
+4. @import url('./utilities.css');     /* Opt-in helper classes */
+5. /* Component-specific styles */     /* Your custom components */</code></pre>
+      
+      <div style="margin-top: var(--spacing-4); padding: var(--spacing-4); background: white; border-radius: var(--radius-md); border: 2px solid var(--color-warning);">
+        <h4 style="margin-bottom: var(--spacing-3); font-size: var(--font-size-lg); font-family: var(--font-family-heading); color: #78350f;">Why This Order?</h4>
+        <ul style="padding-left: var(--spacing-6); display: grid; gap: var(--spacing-2); color: var(--color-text-secondary);">
+          <li><strong>Reset first</strong> - Normalizes browsers before any styling</li>
+          <li><strong>Base second</strong> - Defines structural tokens that theme tokens can reference</li>
+          <li><strong>Theme third</strong> - Colors/fonts can now use structural tokens (e.g., font sizes)</li>
+          <li><strong>Utilities fourth</strong> - Override everything with opt-in classes</li>
+          <li><strong>Components last</strong> - Most specific styles with highest priority</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Usage Section -->
+    <h2>Usage</h2>
+    <p>All design tokens are defined as CSS custom properties in your design tokens file. Import this file before your component styles to use these variables throughout your application.</p>
+    
+    <div class="component-example">
+      <div class="example-title">Example Usage in CSS</div>
+      <pre style="background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%); padding: var(--spacing-6); border-radius: var(--radius-lg); overflow-x: auto; border: 1px solid var(--color-border-default);"><code>/* Gradient Button with Spring Animation */
+.my-button {
+  padding: var(--spacing-3) var(--spacing-6);
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  box-shadow: var(--shadow-purple);
+  transition: all var(--transition-spring);
+}
+
+.my-button:hover {
+  background: var(--gradient-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Vibrant Card */
+.feature-card {
+  padding: var(--spacing-6);
+  background: var(--color-bg-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-default);
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-spring);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}</code></pre>
+    </div>
+
+    <div class="component-example" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-color: transparent;">
+      <div class="example-title" style="color: white;">Design Principles</div>
+      <div style="color: white; line-height: 1.8;">
+        <p style="color: rgba(255, 255, 255, 0.95);"><strong>🎨 Bold & Vibrant:</strong> Use gradients and bright colors to create energy and delight</p>
+        <p style="color: rgba(255, 255, 255, 0.95);"><strong>🌊 Smooth Animations:</strong> Spring-based transitions create natural, playful interactions</p>
+        <p style="color: rgba(255, 255, 255, 0.95);"><strong>📐 4pt Grid:</strong> Consistent spacing with multiples of 4px ensures visual harmony</p>
+        <p style="color: rgba(255, 255, 255, 0.95); margin-bottom: 0;"><strong>✨ Delightful Details:</strong> Colored shadows, hover effects, and micro-interactions add polish</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

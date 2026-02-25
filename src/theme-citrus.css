@@ -1,0 +1,79 @@
+/* Theme-specific Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&family=Fredoka:wght@500;600;700&display=swap');
+
+/**
+ * Vibrant Citrus Theme
+ * 
+ * A warm, high-energy theme inspired by summer sunsets and citrus fruits.
+ * Uses bold oranges, pinks, and warm gradients.
+ * Token overrides only - pair with design-system-base.css.
+ */
+
+:root {
+  /* Gradient Backgrounds - Warm & Energetic */
+  --gradient-primary: linear-gradient(135deg, #FF9966 0%, #FF5E62 100%);
+  --gradient-primary-hover: linear-gradient(135deg, #FF8040 0%, #FF4045 100%);
+  
+  /* Colors - Primary (Orange/Coral) */
+  --color-primary: #FF7043;
+  --color-primary-light: #FFAB91;
+  
+  /* Colors - Accents (Citrus Palette) */
+  --color-purple: #BA68C8; /* Lighter orchid */
+  --color-pink: #F48FB1;   /* Soft pink */
+  --color-orange: #FF9800; /* Bright Orange */
+  --color-teal: #4DB6AC;   /* Soft Teal */
+  --color-blue: #4FC3F7;   /* Sky Blue */
+  
+  /* Colors - Semantic */
+  --color-success: #66BB6A;
+  --color-success-light: #A5D6A7;
+  --color-danger: #EF5350;
+  --color-danger-light: #EF9A9A;
+  --color-warning: #FFA726;
+  --color-warning-light: #FFCC80;
+  --color-error-bg: #FFEBEE;
+  --color-error-border: #FFCDD2;
+  --color-error-text: #B71C1C;
+  
+  /* Colors - Text */
+  --color-text-primary: #37474F;
+  --color-text-secondary: #546E7A;
+  --color-text-muted: #90A4AE;
+  --color-heading: #263238;
+  
+  /* Colors - Background */
+  --color-bg-body: #FFF8E1; /* Very light cream/yellow tint */
+  --color-bg-surface: #FFFFFF;
+  --color-bg-hover: #FFF3E0;
+  --color-bg-item: #FAFAFA;
+  
+  /* Colors - Border */
+  --color-border-default: #CFD8DC;
+  --color-border-focus: #FF7043;
+  
+  /* Typography */
+  --font-family-main: 'Varela Round', system-ui, sans-serif;
+  --font-family-heading: 'Fredoka', system-ui, sans-serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+  --font-family-base: var(--font-family-main);
+  
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  
+  /* Shadows - Warm Glows */
+  --shadow-sm: 0 1px 2px rgba(255, 112, 67, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(255, 112, 67, 0.15), 0 2px 4px -1px rgba(255, 112, 67, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(255, 112, 67, 0.15), 0 4px 6px -2px rgba(255, 112, 67, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(255, 112, 67, 0.15), 0 10px 10px -5px rgba(255, 112, 67, 0.1);
+  
+  /* Shadows - Colored */
+  --shadow-purple: 0 10px 25px -5px rgba(186, 104, 200, 0.4);
+  --shadow-pink: 0 10px 25px -5px rgba(244, 143, 177, 0.4);
+  --shadow-blue: 0 10px 25px -5px rgba(79, 195, 247, 0.4);
+  --shadow-teal: 0 10px 25px -5px rgba(77, 182, 172, 0.4);
+}

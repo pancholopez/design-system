@@ -1,0 +1,80 @@
+/* Theme-specific Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Cinzel:wght@600;700;800&family=IBM+Plex+Mono:wght@400&display=swap');
+
+/**
+ * Mariner's Parchment Theme
+ *
+ * A sophisticated, nautical-inspired theme that balances the authority of deep 
+ * ocean tones with the warmth of weathered sailcloth. Classic, airy, and trustworthy.
+ * Token overrides only - pair with design-system-base.css.
+ */
+
+:root {
+  /* Gradient Backgrounds */
+  --gradient-primary: linear-gradient(145deg, #194769 0%, #102a43 100%);
+  --gradient-primary-hover: linear-gradient(145deg, #245e8a 0%, #194769 100%);
+
+  /* Colors - Primary */
+  --color-primary: #194769;
+  --color-primary-light: #2c5d85;
+
+  /* Colors - Accents */
+  --color-purple: #6B5B95;
+  --color-pink: #E07A89;
+  --color-orange: #F2855E;
+  --color-teal: #2A8C98;
+  --color-blue: #3E8EDE;
+
+  /* Colors - Semantic */
+  --color-success: #2E8B57;
+  --color-success-light: #66C291;
+  --color-danger: #D64545;
+  --color-danger-light: #F29B9B;
+  --color-warning: #D99026;
+  --color-warning-light: #F2C172;
+  --color-error-bg: #FBEAEA;
+  --color-error-border: #E8B6B6;
+  --color-error-text: #9E1F1F;
+
+  /* Colors - Text */
+  --color-text-primary: #102A43;
+  --color-text-secondary: #486581;
+  --color-text-muted: #829AB1;
+  --color-heading: #091826;
+
+  /* Colors - Backgrounds */
+  --color-bg-body: #F6F6E9;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-surface-hover: #D7EEF2;
+  --color-bg-item: #FCFCF9;
+
+  /* Colors - Borders */
+  --color-border: #DCE3E8;
+  --color-border-focus: #F2855E;
+
+  /* Typography */
+  --font-family-main: 'Libre Baskerville', serif;
+  --font-family-heading: 'Cinzel', serif;
+  --font-family-mono: 'IBM Plex Mono', monospace;
+  --font-family-base: var(--font-family-main);
+
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Shadows - Standard */
+  --shadow-sm: 0 1px 2px 0 rgba(25, 71, 105, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(25, 71, 105, 0.1), 0 2px 4px -1px rgba(25, 71, 105, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(25, 71, 105, 0.1), 0 4px 6px -2px rgba(25, 71, 105, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(25, 71, 105, 0.1), 0 10px 10px -5px rgba(25, 71, 105, 0.04);
+
+  /* Shadows - Colored */
+  --shadow-purple: 0 10px 30px -5px rgba(107, 91, 149, 0.4);
+  --shadow-pink: 0 10px 30px -5px rgba(224, 122, 137, 0.4);
+  --shadow-blue: 0 10px 30px -5px rgba(25, 71, 105, 0.4);
+  --shadow-teal: 0 10px 25px -5px rgba(42, 140, 152, 0.4);
+  --shadow-orange: 0 10px 25px -5px rgba(242, 133, 94, 0.5);
+}

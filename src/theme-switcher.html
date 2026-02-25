@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Theme Switcher - Design System Showcase</title>
+  <link rel="stylesheet" href="design-system-base.css">
+  <link rel="stylesheet" href="theme-vibrant.css" id="theme-css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Interactive Theme Switcher</h1>
+    <p>Try different themes live and see how the design system adapts.</p>
+    
+    <!-- Theme Selector -->
+    <div style="margin-bottom: var(--spacing-8); padding: var(--spacing-6); background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: var(--radius-lg); border: 2px solid var(--color-blue);">
+      <div style="display: flex; align-items: center; gap: var(--spacing-4); margin-bottom: var(--spacing-4);">
+        <label for="theme-selector" style="font-weight: var(--font-weight-semibold); font-size: var(--font-size-lg); color: var(--color-heading);">
+          Select Theme:
+        </label>
+        <select id="theme-selector" style="padding: var(--spacing-2) var(--spacing-4); font-size: var(--font-size-base); border: 2px solid var(--color-border-default); border-radius: var(--radius-md); background: white; cursor: pointer; font-family: var(--font-family-base); min-width: 200px;">
+          <option value="theme-vibrant.css">✨ Vibrant (Default)</option>
+          <option value="theme-citrus.css">🍊 Vibrant Citrus</option>
+          <option value="theme-business.css">💼 Modern Business</option>
+          <option value="theme-electric-gelato.css">🍦 Electric Gelato</option>
+          <option value="theme-mariner-parchment.css">⚓ Mariner's Parchment</option>
+        </select>
+      </div>
+      <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">
+        <strong>💡 Tip:</strong> Change the theme from the dropdown above to see the design system transform instantly!
+      </div>
+    </div>
+
+    <div style="margin-bottom: var(--spacing-8); padding: var(--spacing-4); background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: var(--radius-lg); border: 2px solid var(--color-blue);">
+      <strong>📖 Quick Links:</strong>
+      <ul style="margin-top: var(--spacing-2); padding-left: var(--spacing-6);">
+        <li><a href="index.html">← Back to Home</a></li>
+        <li><a href="design-system-guide.html">View Design System Guide →</a></li>
+      </ul>
+    </div>
+    <!-- Colors Section -->
+    <h2>Colors</h2>
+    
+    <h3>Gradient Backgrounds</h3>
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="color-sample" style="background: var(--gradient-primary);"></div>
+        <div class="color-info">
+          <div class="color-name">Primary Gradient</div>
+          <div class="color-value">--gradient-primary</div>
+          <div class="color-value">#667eea → #764ba2</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-sample" style="background: var(--gradient-primary-hover);"></div>
+        <div class="color-info">
+          <div class="color-name">Primary Gradient Hover</div>
+          <div class="color-value">--gradient-primary-hover</div>
+          <div class="color-value">#5568d3 → #63408a</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Primary Colors</h3>
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-primary);"></div>
+        <div class="color-info">
+          <div class="color-name">Primary</div>
+          <div class="color-value">--color-primary</div>
+          <div class="color-value">#f093fb</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-primary-light);"></div>
+        <div class="color-info">
+          <div class="color-name">Primary Light</div>
+          <div class="color-value">--color-primary-light</div>
+          <div class="color-value">#e76ff3</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Accent Colors</h3>
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-purple);"></div>
+        <div class="color-info">
+          <div class="color-name">Purple</div>
+          <div class="color-value">--color-purple</div>
+          <div class="color-value">#a855f7</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-pink);"></div>
+        <div class="color-info">
+          <div class="color-name">Pink</div>
+          <div class="color-value">--color-pink</div>
+          <div class="color-value">#ec4899</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-orange);"></div>
+        <div class="color-info">
+          <div class="color-name">Orange</div>
+          <div class="color-value">--color-orange</div>
+          <div class="color-value">#fb923c</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-teal);"></div>
+        <div class="color-info">
+          <div class="color-name">Teal</div>
+          <div class="color-value">--color-teal</div>
+          <div class="color-value">#14b8a6</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-blue);"></div>
+        <div class="color-info">
+          <div class="color-name">Blue</div>
+          <div class="color-value">--color-blue</div>
+          <div class="color-value">#3b82f6</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Semantic Colors</h3>
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-success);"></div>
+        <div class="color-info">
+          <div class="color-name">Success</div>
+          <div class="color-value">--color-success</div>
+          <div class="color-value">#10b981</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-success-light);"></div>
+        <div class="color-info">
+          <div class="color-name">Success Light</div>
+          <div class="color-value">--color-success-light</div>
+          <div class="color-value">#34d399</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-danger);"></div>
+        <div class="color-info">
+          <div class="color-name">Danger</div>
+          <div class="color-value">--color-danger</div>
+          <div class="color-value">#ef4444</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-danger-light);"></div>
+        <div class="color-info">
+          <div class="color-name">Danger Light</div>
+          <div class="color-value">--color-danger-light</div>
+          <div class="color-value">#fca5a5</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-warning);"></div>
+        <div class="color-info">
+          <div class="color-name">Warning</div>
+          <div class="color-value">--color-warning</div>
+          <div class="color-value">#f59e0b</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-warning-light);"></div>
+        <div class="color-info">
+          <div class="color-name">Warning Light</div>
+          <div class="color-value">--color-warning-light</div>
+          <div class="color-value">#fbbf24</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Text Colors</h3>
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-text-primary);"></div>
+        <div class="color-info">
+          <div class="color-name">Text Primary</div>
+          <div class="color-value">--color-text-primary</div>
+          <div class="color-value">#1e293b</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-text-secondary);"></div>
+        <div class="color-info">
+          <div class="color-name">Text Secondary</div>
+          <div class="color-value">--color-text-secondary</div>
+          <div class="color-value">#64748b</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-text-muted);"></div>
+        <div class="color-info">
+          <div class="color-name">Text Muted</div>
+          <div class="color-value">--color-text-muted</div>
+          <div class="color-value">#94a3b8</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-heading);"></div>
+        <div class="color-info">
+          <div class="color-name">Heading</div>
+          <div class="color-value">--color-heading</div>
+          <div class="color-value">#0f172a</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Background Colors</h3>
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-bg-body); border: 1px solid var(--color-border-default);"></div>
+        <div class="color-info">
+          <div class="color-name">Body Background</div>
+          <div class="color-value">--color-bg-body</div>
+          <div class="color-value">#f8fafc</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-bg-surface); border: 1px solid var(--color-border-default);"></div>
+        <div class="color-info">
+          <div class="color-name">Surface</div>
+          <div class="color-value">--color-bg-surface</div>
+          <div class="color-value">#ffffff</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-bg-item); border: 1px solid var(--color-border-default);"></div>
+        <div class="color-info">
+          <div class="color-name">Item Background</div>
+          <div class="color-value">--color-bg-item</div>
+          <div class="color-value">#f8fafc</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="color-sample" style="background-color: var(--color-bg-hover); border: 1px solid var(--color-border-default);"></div>
+        <div class="color-info">
+          <div class="color-name">Hover Background</div>
+          <div class="color-value">--color-bg-hover</div>
+          <div class="color-value">#f1f5f9</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Typography Section -->
+    <h2>Typography</h2>
+    
+    <h3>Font Families</h3>
+    <div class="type-example">
+      <div class="type-label">--font-family-heading (Outfit)</div>
+      <div style="font-family: var(--font-family-heading); font-size: var(--font-size-xl); font-weight: var(--font-weight-bold);">
+        The quick brown fox jumps over the lazy dog
+      </div>
+    </div>
+    <div class="type-example">
+      <div class="type-label">--font-family-main (Inter)</div>
+      <div style="font-family: var(--font-family-main); font-size: var(--font-size-xl);">
+        The quick brown fox jumps over the lazy dog
+      </div>
+    </div>
+    <div class="type-example">
+      <div class="type-label">--font-family-mono (JetBrains Mono)</div>
+      <div style="font-family: var(--font-family-mono); font-size: var(--font-size-base);">
+        const greeting = "Hello World";
+      </div>
+    </div>
+
+    <h3>Font Sizes (Modern Geometric Ratio 1.25)</h3>
+    <div class="type-example">
+      <div class="type-label">--font-size-4xl (2.25rem / 36px)</div>
+      <div style="font-size: var(--font-size-4xl); font-weight: var(--font-weight-extrabold);">
+        Hero Heading
+      </div>
+    </div>
+    <div class="type-example">
+      <div class="type-label">--font-size-3xl (1.875rem / 30px)</div>
+      <div style="font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold);">
+        Large Heading
+      </div>
+    </div>
+    <div class="type-example">
+      <div class="type-label">--font-size-2xl (1.5rem / 24px)</div>
+      <div style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-semibold);">
+        Section Heading
+      </div>
+    </div>
+    <div class="type-example">
+      <div class="type-label">--font-size-xl (1.25rem / 20px)</div>
+      <div style="font-size: var(--font-size-xl);">
+        Subheading - Important information
+      </div>
+    </div>
+    <div class="type-example">
+      <div class="type-label">--font-size-lg (1.125rem / 18px)</div>
+      <div style="font-size: var(--font-size-lg);">
+        Large Body - Emphasized content
+      </div>
+    </div>
+    <div class="type-example">
+      <div class="type-label">--font-size-base (1rem / 16px)</div>
+      <div style="font-size: var(--font-size-base);">
+        Base Text - Default body text size
+      </div>
+    </div>
+    <div class="type-example">
+      <div class="type-label">--font-size-sm (0.875rem / 14px)</div>
+      <div style="font-size: var(--font-size-sm);">
+        Small Text - Secondary information
+      </div>
+    </div>
+    <div class="type-example">
+      <div class="type-label">--font-size-xs (0.75rem / 12px)</div>
+      <div style="font-size: var(--font-size-xs);">
+        Extra Small Text - Captions and metadata
+      </div>
+    </div>
+
+    <h3>Font Weights</h3>
+    <div class="type-example">
+      <div class="type-label">--font-weight-extrabold (800)</div>
+      <div style="font-weight: var(--font-weight-extrabold); font-size: var(--font-size-xl);">
+        Extra Bold Text - Hero headings
+      </div>
+    </div>
+    <div class="type-example">
+      <div class="type-label">--font-weight-bold (700)</div>
+      <div style="font-weight: var(--font-weight-bold); font-size: var(--font-size-xl);">
+        Bold Text - Primary headings
+      </div>
+    </div>
+    <div class="type-example">
+      <div class="type-label">--font-weight-semibold (600)</div>
+      <div style="font-weight: var(--font-weight-semibold); font-size: var(--font-size-xl);">
+        Semibold Text - Subheadings and emphasis
+      </div>
+    </div>
+    <div class="type-example">
+      <div class="type-label">--font-weight-medium (500)</div>
+      <div style="font-weight: var(--font-weight-medium); font-size: var(--font-size-xl);">
+        Medium Text - Slightly emphasized content
+      </div>
+    </div>
+    <div class="type-example">
+      <div class="type-label">--font-weight-normal (400)</div>
+      <div style="font-weight: var(--font-weight-normal); font-size: var(--font-size-xl);">
+        Normal Text - Body content
+      </div>
+    </div>
+
+    <!-- Spacing Section -->
+    <h2>Spacing Scale</h2>
+    <p>4pt grid system creates consistent spacing and visual rhythm. Each step is a multiple of 4px.</p>
+    
+    <div class="spacing-grid">
+      <div class="spacing-item">
+        <div class="spacing-label">--spacing-1</div>
+        <div class="spacing-visual" style="width: var(--spacing-1);"></div>
+        <span style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">0.25rem (4px)</span>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-label">--spacing-2</div>
+        <div class="spacing-visual" style="width: var(--spacing-2);"></div>
+        <span style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">0.5rem (8px)</span>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-label">--spacing-3</div>
+        <div class="spacing-visual" style="width: var(--spacing-3);"></div>
+        <span style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">0.75rem (12px)</span>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-label">--spacing-4</div>
+        <div class="spacing-visual" style="width: var(--spacing-4);"></div>
+        <span style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">1rem (16px)</span>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-label">--spacing-6</div>
+        <div class="spacing-visual" style="width: var(--spacing-6);"></div>
+        <span style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">1.5rem (24px)</span>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-label">--spacing-8</div>
+        <div class="spacing-visual" style="width: var(--spacing-8);"></div>
+        <span style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">2rem (32px)</span>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-label">--spacing-12</div>
+        <div class="spacing-visual" style="width: var(--spacing-12);"></div>
+        <span style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">3rem (48px)</span>
+      </div>
+      <div class="spacing-item">
+        <div class="spacing-label">--spacing-16</div>
+        <div class="spacing-visual" style="width: var(--spacing-16);"></div>
+        <span style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">4rem (64px)</span>
+      </div>
+    </div>
+
+    <!-- Shadows Section -->
+    <h2>Shadows</h2>
+    
+    <h3>Standard Shadows</h3>
+    <div class="flex-gap mb-lg" style="gap: var(--spacing-6);">
+      <div class="shadow-box" style="box-shadow: var(--shadow-sm);">
+        Small<br>--shadow-sm
+      </div>
+      <div class="shadow-box" style="box-shadow: var(--shadow-md);">
+        Medium<br>--shadow-md
+      </div>
+      <div class="shadow-box" style="box-shadow: var(--shadow-lg);">
+        Large<br>--shadow-lg
+      </div>
+      <div class="shadow-box" style="box-shadow: var(--shadow-xl);">
+        XLarge<br>--shadow-xl
+      </div>
+    </div>
+
+    <h3>Colored Shadows</h3>
+    <div class="flex-gap" style="gap: var(--spacing-6);">
+      <div class="shadow-box" style="box-shadow: var(--shadow-purple); background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);">
+        Purple<br>--shadow-purple
+      </div>
+      <div class="shadow-box" style="box-shadow: var(--shadow-pink); background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);">
+        Pink<br>--shadow-pink
+      </div>
+      <div class="shadow-box" style="box-shadow: var(--shadow-blue); background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);">
+        Blue<br>--shadow-blue
+      </div>
+      <div class="shadow-box" style="box-shadow: var(--shadow-teal); background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);">
+        Teal<br>--shadow-teal
+      </div>
+    </div>
+
+    <!-- Components Section -->
+    <h2>Components</h2>
+
+    <h3>Buttons</h3>
+    <div class="component-example">
+      <div class="example-title">Primary Button (Gradient)</div>
+      <div class="flex-gap mb-lg">
+        <button class="btn btn-primary">Primary Action</button>
+        <button class="btn btn-primary" disabled style="opacity: 0.5; cursor: not-allowed;">Disabled</button>
+      </div>
+      <code>.btn .btn-primary</code>
+    </div>
+
+    <div class="component-example">
+      <div class="example-title">Success Button</div>
+      <div class="flex-gap mb-lg">
+        <button class="btn btn-success">Complete</button>
+      </div>
+      <code>.btn .btn-success</code>
+    </div>
+
+    <div class="component-example">
+      <div class="example-title">Danger Button</div>
+      <div class="flex-gap mb-lg">
+        <button class="btn btn-danger">Delete</button>
+      </div>
+      <code>.btn .btn-danger</code>
+    </div>
+
+    <div class="component-example">
+      <div class="example-title">Accent Buttons</div>
+      <div class="flex-gap mb-lg">
+        <button class="btn btn-accent-pink">Pink</button>
+        <button class="btn btn-accent-teal">Teal</button>
+        <button class="btn btn-accent-blue">Blue</button>
+      </div>
+      <code>.btn .btn-accent-{color}</code>
+    </div>
+
+    <h3>Form Elements</h3>
+    <div class="component-example">
+      <div class="example-title">Text Input</div>
+      <div class="form-group">
+        <label class="form-label" for="example-input">Label</label>
+        <input type="text" id="example-input" class="input" placeholder="Enter text here...">
+      </div>
+      <code>.input</code>
+    </div>
+
+    <div class="component-example">
+      <div class="example-title">Checkbox</div>
+      <div class="flex-gap">
+        <label style="display: flex; align-items: center; gap: var(--spacing-xs); cursor: pointer;">
+          <input type="checkbox" style="width: 20px; height: 20px; cursor: pointer;">
+          <span>Checkbox option</span>
+        </label>
+      </div>
+    </div>
+
+    <h3>Cards</h3>
+    <div class="component-example">
+      <div class="example-title">Basic Card</div>
+      <div class="card" style="max-width: 400px;">
+        <h3 style="margin-top: 0; color: var(--color-heading);">Card Title</h3>
+        <p style="margin-bottom: 0;">This is a card component with shadow and rounded corners. Hover to see the effect!</p>
+      </div>
+      <br>
+      <code>.card</code>
+    </div>
+
+    <div class="component-example">
+      <div class="example-title">Hoverable Card</div>
+      <div class="card card-hover" style="max-width: 400px; cursor: pointer;">
+        <h3 style="margin-top: 0; color: var(--color-heading);">Interactive Card</h3>
+        <p style="margin-bottom: 0;">Hover over this card to see it lift with a spring animation!</p>
+      </div>
+      <br>
+      <code>.card .card-hover</code>
+    </div>
+
+    <div class="component-example">
+      <div class="example-title">Gradient Card</div>
+      <div class="card card-gradient" style="max-width: 400px;">
+        <h3 style="margin-top: 0;">Vibrant Card</h3>
+        <p style="margin-bottom: 0;">Cards can have gradient backgrounds for special emphasis and visual impact.</p>
+      </div>
+      <br>
+      <code>.card .card-gradient</code>
+    </div>
+
+    <h3>Alert Messages</h3>
+    <div class="component-example">
+      <div class="example-title">Success Alert</div>
+      <div class="success-message">
+        ✓ Your changes have been saved successfully!
+      </div>
+      <br>
+      <code>.success-message</code>
+    </div>
+
+    <div class="component-example">
+      <div class="example-title">Error Alert</div>
+      <div class="error-message">
+        ✕ An error occurred. Please try again.
+      </div>
+      <br>
+      <code>.error-message</code>
+    </div>
+
+    <div class="component-example">
+      <div class="example-title">Warning Alert</div>
+      <div class="warning-message">
+        ⚠ Warning: This action cannot be undone.
+      </div>
+      <br>
+      <code>.warning-message</code>
+    </div>
+
+    <!-- Animations Section -->
+    <h2>Animations</h2>
+    
+    <h3>Spring-Based Animations</h3>
+    <p>Using cubic-bezier curves for bouncy, natural feeling animations.</p>
+    
+    <div class="component-example">
+      <div class="example-title">Bounce Animation</div>
+      <div class="flex-gap" style="gap: var(--spacing-8);">
+        <div class="animation-box spring-bounce">
+          Bounce
+        </div>
+      </div>
+      <br>
+      <code>cubic-bezier(0.34, 1.56, 0.64, 1) - Spring effect with overshoot</code>
+    </div>
+
+    <div class="component-example">
+      <div class="example-title">Pulse Animation</div>
+      <div class="flex-gap" style="gap: var(--spacing-8);">
+        <div class="animation-box spring-pulse">
+          Pulse
+        </div>
+      </div>
+      <br>
+      <code>cubic-bezier(0.4, 0, 0.6, 1) - Smooth breathing effect</code>
+    </div>
+
+    <div class="component-example">
+      <div class="example-title">Wiggle Animation</div>
+      <div class="flex-gap" style="gap: var(--spacing-8);">
+        <div class="animation-box spring-wiggle">
+          Wiggle
+        </div>
+      </div>
+      <br>
+      <code>Rotation with spring timing - Playful attention grabber</code>
+    </div>
+
+    <h3>Transition Timing</h3>
+    <div class="type-example">
+      <div class="type-label">--transition-fast</div>
+      <div style="color: var(--color-text-primary); font-weight: var(--font-weight-medium);">
+        0.2s cubic-bezier(0.4, 0, 0.2, 1) - Fast, smooth transitions
+      </div>
+    </div>
+    <div class="type-example">
+      <div class="type-label">--transition-spring</div>
+      <div style="color: var(--color-text-primary); font-weight: var(--font-weight-medium);">
+        0.5s cubic-bezier(0.34, 1.56, 0.64, 1) - Bouncy spring animations
+      </div>
+    </div>
+
+    <!-- Border Radius Section -->
+    <h2>Border Radius</h2>
+    <div class="flex-gap" style="gap: var(--spacing-6);">
+      <div style="background: var(--gradient-primary); color: white; padding: var(--spacing-6); border-radius: var(--radius-sm); box-shadow: var(--shadow-purple);">
+        <div style="font-weight: var(--font-weight-semibold);">--radius-sm</div>
+        <div style="font-size: var(--font-size-sm); opacity: 0.9;">8px</div>
+      </div>
+      <div style="background: var(--gradient-primary); color: white; padding: var(--spacing-6); border-radius: var(--radius-md); box-shadow: var(--shadow-purple);">
+        <div style="font-weight: var(--font-weight-semibold);">--radius-md</div>
+        <div style="font-size: var(--font-size-sm); opacity: 0.9;">12px</div>
+      </div>
+      <div style="background: var(--gradient-primary); color: white; padding: var(--spacing-6); border-radius: var(--radius-lg); box-shadow: var(--shadow-purple);">
+        <div style="font-weight: var(--font-weight-semibold);">--radius-lg</div>
+        <div style="font-size: var(--font-size-sm); opacity: 0.9;">16px</div>
+      </div>
+      <div style="background: var(--gradient-primary); color: white; padding: var(--spacing-6); border-radius: var(--radius-xl); box-shadow: var(--shadow-purple);">
+        <div style="font-weight: var(--font-weight-semibold);">--radius-xl</div>
+        <div style="font-size: var(--font-size-sm); opacity: 0.9;">24px</div>
+      </div>
+      <div style="background: var(--gradient-primary); color: white; padding: var(--spacing-6); width: 100px; height: 100px; border-radius: var(--radius-full); display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: var(--shadow-purple);">
+        <div style="font-weight: var(--font-weight-semibold); text-align: center;">--radius-full</div>
+        <div style="font-size: var(--font-size-sm); opacity: 0.9;">9999px</div>
+      </div>
+    </div>
+
+    
+    <!-- Showcase Section -->
+    <h2>Showcase</h2>
+    <p>Putting it all together: real-world examples using the design system components.</p>
+
+    <div class="flex-gap" style="gap: var(--spacing-8); align-items: flex-start; justify-content: center;">
+      
+      <!-- Login Card Example -->
+      <div class="card" style="width: 100%; max-width: 400px; padding: var(--spacing-8);">
+        <div style="text-align: center; margin-bottom: var(--spacing-6);">
+          <div class="animation-box spring-bounce" style="width: 60px; height: 60px; border-radius: var(--radius-full); margin-bottom: var(--spacing-4); font-size: 1.5rem;">✨</div>
+          <h3 style="margin: 0; font-family: var(--font-family-heading);">Welcome Back</h3>
+          <p style="margin: 0; font-size: var(--font-size-sm);">Please sign in to continue</p>
+        </div>
+
+        <form onsubmit="event.preventDefault();">
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="input" placeholder="you@example.com">
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" style="display: flex; justify-content: space-between;">
+              Password
+              <a href="#" style="color: var(--color-primary); text-decoration: none; font-size: var(--font-size-xs); font-weight: var(--font-weight-normal);">Forgot?</a>
+            </label>
+            <input type="password" class="input" placeholder="••••••••">
+          </div>
+
+          <div class="form-group" style="display: flex; align-items: center; gap: var(--spacing-2);">
+            <input type="checkbox" id="remember" style="accent-color: var(--color-primary); width: 16px; height: 16px;">
+            <label for="remember" style="font-size: var(--font-size-sm); color: var(--color-text-secondary); cursor: pointer;">Remember me</label>
+          </div>
+
+          <button class="btn btn-primary" style="width: 100%; margin-top: var(--spacing-2);">Sign In</button>
+        </form>
+        
+        <div style="margin-top: var(--spacing-6); text-align: center; font-size: var(--font-size-sm); color: var(--color-text-secondary);">
+          Don't have an account? <a href="#" style="color: var(--color-primary); font-weight: var(--font-weight-semibold); text-decoration: none;">Sign up</a>
+        </div>
+      </div>
+
+      <!-- User Profile Widget Example -->
+      <div class="card card-hover" style="width: 100%; max-width: 400px; padding: 0; overflow: hidden;">
+        <div style="background: var(--gradient-primary); padding: var(--spacing-8) var(--spacing-6); text-align: center; color: white;">
+          <div style="width: 80px; height: 80px; background: white; border-radius: var(--radius-full); margin: 0 auto var(--spacing-4); padding: 4px;">
+            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="Avatar" style="width: 100%; height: 100%; border-radius: var(--radius-full); background: var(--color-bg-body);">
+          </div>
+          <h3 style="color: white; margin: 0; font-family: var(--font-family-heading);">Alex Morgan</h3>
+          <p style="color: rgba(255,255,255,0.8); margin: 0; font-size: var(--font-size-sm);">Senior Developer</p>
+        </div>
+        
+        <div style="padding: var(--spacing-6);">
+          <div style="display: flex; justify-content: space-between; margin-bottom: var(--spacing-4); border-bottom: 1px solid var(--color-border-default); padding-bottom: var(--spacing-4);">
+            <div style="text-align: center;">
+              <div style="font-weight: var(--font-weight-bold); font-size: var(--font-size-lg); font-family: var(--font-family-heading);">12</div>
+              <div style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Projects</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-weight: var(--font-weight-bold); font-size: var(--font-size-lg); font-family: var(--font-family-heading);">85</div>
+              <div style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Commits</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-weight: var(--font-weight-bold); font-size: var(--font-size-lg); font-family: var(--font-family-heading);">4.9</div>
+              <div style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Rating</div>
+            </div>
+          </div>
+          
+          <div style="display: flex; gap: var(--spacing-2); flex-wrap: wrap;">
+            <span style="background: #f0fdfa; color: var(--color-teal); padding: 4px 12px; border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: var(--font-weight-medium);">React</span>
+            <span style="background: #eff6ff; color: var(--color-blue); padding: 4px 12px; border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: var(--font-weight-medium);">TypeScript</span>
+            <span style="background: #fdf2f8; color: var(--color-pink); padding: 4px 12px; border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: var(--font-weight-medium);">UI/UX</span>
+          </div>
+          
+          <button class="btn" style="width: 100%; margin-top: var(--spacing-6); border: 1px solid var(--color-border-default); background: white; color: var(--color-text-primary);">View Profile</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Theme Switcher Logic
+    const themeSelector = document.getElementById('theme-selector');
+    const themeCssLink = document.getElementById('theme-css');
+    
+    // Load saved theme preference from localStorage
+    const savedTheme = localStorage.getItem('selectedTheme');
+    if (savedTheme) {
+      themeCssLink.href = savedTheme;
+      themeSelector.value = savedTheme;
+    }
+    
+    // Handle theme change
+    themeSelector.addEventListener('change', function() {
+      const selectedTheme = this.value;
+      themeCssLink.href = selectedTheme;
+      
+      // Save preference to localStorage
+      localStorage.setItem('selectedTheme', selectedTheme);
+      
+      // Optional: Add a subtle transition effect
+      document.body.style.transition = 'background 0.3s ease, color 0.3s ease';
+      setTimeout(() => {
+        document.body.style.transition = '';
+      }, 300);
+    });
+  </script>
+</body>
+</html>
+

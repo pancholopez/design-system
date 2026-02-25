@@ -1,0 +1,82 @@
+/* Theme-specific Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Shrikhand&family=Space+Mono:wght@400&display=swap');
+
+/**
+ * Electric Gelato Theme
+ *
+ * A high-energy, retro-pop aesthetic that balances bold summer vibrancy 
+ * with a comforting, creamy foundation. Playful, nostalgic, and fun.
+ * Token overrides only - pair with design-system-base.css.
+ */
+
+:root {
+  /* Gradient Backgrounds */
+  /* A fresh, energetic gradient moving from the primary teal to the punchy blue */
+  --gradient-primary: linear-gradient(135deg, #3EC1D3 0%, #3B82F6 100%);
+  /* A warmer, "sunset" hover state blending pink into orange */
+  --gradient-primary-hover: linear-gradient(135deg, #FF165D 0%, #FF9A00 100%);
+
+  /* Colors - Primary (Teal) */
+  --color-primary: #3EC1D3;
+  --color-primary-light: #71D8E6;
+
+  /* Colors - Accents */
+  --color-purple: #9D4EDD;
+  --color-pink: #FF165D;
+  --color-orange: #FF9A00;
+  --color-teal: #3EC1D3;
+  --color-blue: #3B82F6;
+
+  /* Colors - Semantic */
+  --color-success: #00CC66;
+  --color-success-light: #66E0A3;
+  --color-danger: #FF165D;
+  --color-danger-light: #FF8BAE;
+  --color-warning: #FF9A00;
+  --color-warning-light: #FFCC80;
+  --color-error-bg: #FFF0F5;
+  --color-error-border: #FF165D;
+  --color-error-text: #D90445;
+
+  /* Colors - Text */
+  --color-text-primary: #1F2937;
+  --color-text-secondary: #4B5563;
+  --color-text-muted: #9CA3AF;
+  --color-heading: #111827;
+
+  /* Colors - Backgrounds */
+  --color-bg-body: #F6F7D7;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-surface-hover: #FDFDF5;
+  --color-bg-item: #FFFFFF;
+
+  /* Colors - Borders */
+  --color-border: #E8E8D0;
+  --color-border-focus: #FF165D;
+
+  /* Typography */
+  --font-family-main: 'Quicksand', system-ui, sans-serif;
+  --font-family-heading: 'Shrikhand', cursive;
+  --font-family-mono: 'Space Mono', monospace;
+  --font-family-base: var(--font-family-main);
+
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 600;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Shadows - Standard */
+  --shadow-sm: 0 1px 2px 0 rgba(62, 193, 211, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(62, 193, 211, 0.15);
+  --shadow-lg: 0 10px 15px -3px rgba(31, 41, 55, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(31, 41, 55, 0.1);
+
+  /* Shadows - Colored */
+  --shadow-purple: 0 10px 30px -5px rgba(157, 78, 221, 0.4);
+  --shadow-pink: 0 10px 30px -5px rgba(255, 22, 93, 0.4);
+  --shadow-blue: 0 10px 30px -5px rgba(59, 130, 246, 0.4);
+  --shadow-teal: 0 10px 30px -5px rgba(62, 193, 211, 0.5);
+  --shadow-orange: 0 10px 30px -5px rgba(255, 154, 0, 0.4);
+}

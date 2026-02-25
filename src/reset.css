@@ -1,0 +1,118 @@
+/**
+ * Modern CSS Reset - 2025 Edition
+ * 
+ * A modern, minimal CSS reset combining best practices from:
+ * - Josh Comeau's Custom CSS Reset
+ * - Andy Bell's Modern CSS Reset
+ * - Expert recommendations for accessibility and progressive enhancement
+ * 
+ * Purpose: Browser normalization only - no design opinions
+ */
+
+/* 1. Use a more intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Allow percentage-based heights in the application */
+html,
+body {
+  height: 100%;
+}
+
+/* 4. Improve typography & accessibility defaults */
+body {
+  font-family: var(--font-family-base);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; /* Crisp text for Mac/iOS */
+  -moz-osx-font-smoothing: grayscale;
+  /* Accessible default; prevents mobile font inflation quirk */
+  /* Use 100% instead of none - none can prevent user zoom (WCAG violation) */
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Remove default margin and padding from figure */
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Create a root stacking context (helps with z-index in React/SPA) */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* 10. Modern Text Wrapping (Progressive Enhancement) */
+/* Balance headings for better visual appearance */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/* Pretty paragraphs prevent orphans */
+p {
+  text-wrap: pretty;
+}
+
+/* 11. List Role Reset (Safari accessibility fix for list-style: none) */
+/* Using :where() for low specificity */
+:where([role="list"]) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 12. Respect Reduced Motion preferences (Accessibility) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
