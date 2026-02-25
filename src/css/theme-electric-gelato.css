@@ -52,6 +52,7 @@
 
   /* Colors - Borders */
   --color-border: #E8E8D0;
+  --color-border-default: #E8E8D0;
   --color-border-focus: #FF165D;
 
   /* Typography */

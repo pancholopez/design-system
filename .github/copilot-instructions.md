@@ -26,7 +26,7 @@ The design system uses a 3-layer architecture:
 - **Font families** - `--font-family-main`, `--font-family-heading`, `--font-family-mono`
 - **Font weights** - varies by font family (e.g., Outfit uses 500/700/800, Manrope uses different weights)
 - **Shadows** - may need adjustments for dark themes
-- **Gradients** - `--gradient-primary`, etc.
+- **Gradients** - `--gradient-primary`, `--gradient-primary-hover`
 
 ### File Structure
 
@@ -123,8 +123,10 @@ document.getElementById('theme-css').href = 'css/theme-citrus.css';
 - Test changes with the theme-switcher to ensure visual consistency
 
 ### When adding new token types:
-- If it varies by theme (e.g., a new color), add it to ALL theme files
+- If it varies by theme (e.g., a new color), add it to ALL theme files for consistency
 - If it's structural (e.g., a new spacing value), add it to `base.css`
+- Use existing CSS variables in showcase/documentation HTML instead of hardcoded values
+- Prefer reusing existing variables (like `--color-bg-hover`) over creating new ones
 
 ### When creating components:
 - Use CSS custom properties (tokens) rather than hardcoded values

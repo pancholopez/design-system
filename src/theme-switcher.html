@@ -13,12 +13,12 @@
     <p>Try different themes live and see how the design system adapts.</p>
     
     <!-- Theme Selector -->
-    <div style="margin-bottom: var(--spacing-8); padding: var(--spacing-6); background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: var(--radius-lg); border: 2px solid var(--color-blue);">
+    <div style="margin-bottom: var(--spacing-8); padding: var(--spacing-6); background: var(--color-bg-hover); border-radius: var(--radius-lg); border: 2px solid var(--color-blue);">
       <div style="display: flex; align-items: center; gap: var(--spacing-4); margin-bottom: var(--spacing-4);">
         <label for="theme-selector" style="font-weight: var(--font-weight-semibold); font-size: var(--font-size-lg); color: var(--color-heading);">
           Select Theme:
         </label>
-        <select id="theme-selector" style="padding: var(--spacing-2) var(--spacing-4); font-size: var(--font-size-base); border: 2px solid var(--color-border-default); border-radius: var(--radius-md); background: white; cursor: pointer; font-family: var(--font-family-base); min-width: 200px;">
+        <select id="theme-selector" style="padding: var(--spacing-2) var(--spacing-4); font-size: var(--font-size-base); border: 2px solid var(--color-border-default); border-radius: var(--radius-md); background: var(--color-bg-surface); cursor: pointer; font-family: var(--font-family-base); min-width: 200px;">
           <option value="css/theme-vibrant.css">✨ Vibrant (Default)</option>
           <option value="css/theme-citrus.css">🍊 Vibrant Citrus</option>
           <option value="css/theme-business.css">💼 Modern Business</option>
@@ -31,7 +31,7 @@
       </div>
     </div>
 
-    <div style="margin-bottom: var(--spacing-8); padding: var(--spacing-4); background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-radius: var(--radius-lg); border: 2px solid var(--color-blue);">
+    <div style="margin-bottom: var(--spacing-8); padding: var(--spacing-4); background: var(--color-bg-hover); border-radius: var(--radius-lg); border: 2px solid var(--color-blue);">
       <strong>📖 Quick Links:</strong>
       <ul style="margin-top: var(--spacing-2); padding-left: var(--spacing-6);">
         <li><a href="index.html">← Back to Home</a></li>
@@ -422,16 +422,16 @@
 
     <h3>Colored Shadows</h3>
     <div class="flex-gap" style="gap: var(--spacing-6);">
-      <div class="shadow-box" style="box-shadow: var(--shadow-purple); background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);">
+      <div class="shadow-box" style="box-shadow: var(--shadow-purple); background: var(--color-bg-hover);">
         Purple<br>--shadow-purple
       </div>
-      <div class="shadow-box" style="box-shadow: var(--shadow-pink); background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);">
+      <div class="shadow-box" style="box-shadow: var(--shadow-pink); background: var(--color-bg-hover);">
         Pink<br>--shadow-pink
       </div>
-      <div class="shadow-box" style="box-shadow: var(--shadow-blue); background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);">
+      <div class="shadow-box" style="box-shadow: var(--shadow-blue); background: var(--color-bg-hover);">
         Blue<br>--shadow-blue
       </div>
-      <div class="shadow-box" style="box-shadow: var(--shadow-teal); background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);">
+      <div class="shadow-box" style="box-shadow: var(--shadow-teal); background: var(--color-bg-hover);">
         Teal<br>--shadow-teal
       </div>
     </div>
@@ -677,7 +677,7 @@
       <!-- User Profile Widget Example -->
       <div class="card card-hover" style="width: 100%; max-width: 400px; padding: 0; overflow: hidden;">
         <div style="background: var(--gradient-primary); padding: var(--spacing-8) var(--spacing-6); text-align: center; color: white;">
-          <div style="width: 80px; height: 80px; background: white; border-radius: var(--radius-full); margin: 0 auto var(--spacing-4); padding: 4px;">
+          <div style="width: 80px; height: 80px; background: var(--color-bg-surface); border-radius: var(--radius-full); margin: 0 auto var(--spacing-4); padding: 4px;">
             <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="Avatar" style="width: 100%; height: 100%; border-radius: var(--radius-full); background: var(--color-bg-body);">
           </div>
           <h3 style="color: white; margin: 0; font-family: var(--font-family-heading);">Alex Morgan</h3>
@@ -701,12 +701,12 @@
           </div>
           
           <div style="display: flex; gap: var(--spacing-2); flex-wrap: wrap;">
-            <span style="background: #f0fdfa; color: var(--color-teal); padding: 4px 12px; border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: var(--font-weight-medium);">React</span>
-            <span style="background: #eff6ff; color: var(--color-blue); padding: 4px 12px; border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: var(--font-weight-medium);">TypeScript</span>
-            <span style="background: #fdf2f8; color: var(--color-pink); padding: 4px 12px; border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: var(--font-weight-medium);">UI/UX</span>
+            <span style="background: var(--color-bg-hover); color: var(--color-teal); padding: 4px 12px; border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: var(--font-weight-medium);">React</span>
+            <span style="background: var(--color-bg-hover); color: var(--color-blue); padding: 4px 12px; border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: var(--font-weight-medium);">TypeScript</span>
+            <span style="background: var(--color-bg-hover); color: var(--color-pink); padding: 4px 12px; border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: var(--font-weight-medium);">UI/UX</span>
           </div>
           
-          <button class="btn" style="width: 100%; margin-top: var(--spacing-6); border: 1px solid var(--color-border-default); background: white; color: var(--color-text-primary);">View Profile</button>
+          <button class="btn" style="width: 100%; margin-top: var(--spacing-6); border: 1px solid var(--color-border-default); background: var(--color-bg-surface); color: var(--color-text-primary);">View Profile</button>
         </div>
       </div>
 
