@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Design System Guide - Documentation</title>
-  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/design-system-base.css">
+  <link rel="stylesheet" href="css/theme-vibrant.css">
 </head>
 <body>
   <div class="container">
@@ -43,7 +44,7 @@
         </div>
         
         <div style="background: white; padding: var(--spacing-6); border-radius: var(--radius-lg); border: 2px solid var(--color-purple);">
-          <h4 style="margin-bottom: var(--spacing-3); font-size: var(--font-size-lg); font-family: var(--font-family-heading); color: var(--color-purple);">Theme-Specific Tokens (design-system.css)</h4>
+          <h4 style="margin-bottom: var(--spacing-3); font-size: var(--font-size-lg); font-family: var(--font-family-heading); color: var(--color-purple);">Theme-Specific Tokens (theme-*.css files)</h4>
           <p style="font-size: var(--font-size-sm); margin-bottom: var(--spacing-3); color: var(--color-text-secondary);">These change when switching themes. They define visual identity.</p>
           <ul style="list-style: none; padding: 0; display: grid; gap: var(--spacing-2);">
             <li>🎨 Colors (all: --color-primary, accents, semantic, text, bg, border)</li>
@@ -59,12 +60,12 @@
         <h4 style="margin-bottom: var(--spacing-3); font-size: var(--font-size-lg); font-family: var(--font-family-heading); color: var(--color-success);">✨ Creating New Themes is Easy!</h4>
         <p style="margin-bottom: var(--spacing-3);">To create a new theme, you only need to:</p>
         <ol style="padding-left: var(--spacing-6); display: grid; gap: var(--spacing-2); color: var(--color-text-secondary);">
-          <li>Copy theme-specific variables from <code>design-system.css</code></li>
+          <li>Copy any existing <code>theme-*.css</code> file as a starting point</li>
           <li>Modify colors, fonts, and shadows to match your new theme</li>
-          <li>Save as <code>theme-dark.css</code> (or any name)</li>
-          <li>Swap the import: <code>@import './theme-dark.css'</code></li>
+          <li>Save as <code>theme-yourname.css</code></li>
+          <li>Use it: <code>&lt;link rel="stylesheet" href="css/theme-yourname.css"&gt;</code></li>
         </ol>
-        <p style="margin-top: var(--spacing-3); margin-bottom: 0; color: var(--color-text-secondary); font-size: var(--font-size-sm);">Current examples include <code>design-system.css</code> (legacy), <code>theme-vibrant.css</code>, <code>theme-citrus.css</code>, and <code>theme-business.css</code>.</p>
+        <p style="margin-top: var(--spacing-3); margin-bottom: 0; color: var(--color-text-secondary); font-size: var(--font-size-sm);">Current themes include <code>theme-vibrant.css</code>, <code>theme-citrus.css</code>, <code>theme-business.css</code>, <code>theme-electric-gelato.css</code>, and <code>theme-mariner-parchment.css</code>.</p>
         <div style="margin-top: var(--spacing-4); padding: var(--spacing-3); background: #f0fdf4; border-left: 3px solid var(--color-success); border-radius: var(--radius-sm); font-size: var(--font-size-sm);">
           <strong>Pro Tip:</strong> All structural tokens (spacing, typography scale, radius) automatically work with your new theme!
         </div>
@@ -132,7 +133,7 @@
         </ul>
       </div>
       <br>
-      <code>@import url('./design-system.css');</code>
+      <code>@import url('./theme-vibrant.css'); /* or any other theme-*.css file */</code>
     </div>
 
     <h3>Layer 4: Utilities (Opt-In Classes)</h3>
@@ -165,7 +166,7 @@
 &lt;code class="mono"&gt;npm install react&lt;/code&gt;</code></pre>
       </div>
       <br>
-      <code>@import url('./utilities.css');</code>
+      <code>Utilities are now included in reset.css - no separate import needed</code>
     </div>
 
     <h3>Import Order Matters</h3>
@@ -173,11 +174,10 @@
       <div class="example-title" style="color: #78350f;">⚠️ Critical: CSS Cascade Order</div>
       <p style="color: #78350f; margin-bottom: var(--spacing-4);">Always import in this order for proper CSS specificity and cascade:</p>
       
-      <pre style="background: white; padding: var(--spacing-4); border-radius: var(--radius-md); overflow-x: auto; border: 1px solid var(--color-warning); font-family: var(--font-family-mono); font-size: var(--font-size-sm);"><code>1. @import url('./reset.css');         /* Browser normalization */
-2. @import url('./base.css');          /* Structural tokens + global styles */
-3. @import url('./design-system.css'); /* Theme-specific tokens (colors, fonts) */
-4. @import url('./utilities.css');     /* Opt-in helper classes */
-5. /* Component-specific styles */     /* Your custom components */</code></pre>
+      <pre style="background: white; padding: var(--spacing-4); border-radius: var(--radius-md); overflow-x: auto; border: 1px solid var(--color-warning); font-family: var(--font-family-mono); font-size: var(--font-size-sm);"><code>1. @import url('./reset.css');           /* Browser normalization + utilities */
+2. @import url('./base.css');            /* Structural tokens + global styles */
+3. @import url('./theme-vibrant.css');   /* Theme-specific tokens (colors, fonts) */
+4. /* Component-specific styles */       /* Your custom components */</code></pre>
       
       <div style="margin-top: var(--spacing-4); padding: var(--spacing-4); background: white; border-radius: var(--radius-md); border: 2px solid var(--color-warning);">
         <h4 style="margin-bottom: var(--spacing-3); font-size: var(--font-size-lg); font-family: var(--font-family-heading); color: #78350f;">Why This Order?</h4>

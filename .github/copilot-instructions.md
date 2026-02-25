@@ -6,12 +6,11 @@ This is an opinionated CSS design system built on a layered architecture with a 
 
 ### CSS Layering System
 
-The design system uses a 4-layer architecture:
+The design system uses a 3-layer architecture:
 
 1. **reset.css** - Browser normalization + utility classes (.sr-only, .mono)
 2. **base.css** - Theme-agnostic structural tokens + global element styles
 3. **Theme files** - Theme-specific tokens (colors, fonts, shadows)
-4. **Showcase styles** - Component styles in design-system-base.css
 
 ### Token Separation: Theme-Agnostic vs Theme-Specific
 
@@ -35,9 +34,8 @@ The design system uses a 4-layer architecture:
 src/
 ├── css/
 │   ├── reset.css                    # Browser normalization + utility classes
-│   ├── base.css                     # Structural tokens + global styles (83 lines)
-│   ├── design-system-base.css       # Base imports (no theme) - pair with a theme file
-│   ├── design-system.css            # Legacy: all-in-one with embedded Vibrant theme (455 lines)
+│   ├── base.css                     # Structural tokens + global styles
+│   ├── design-system-base.css       # Imports reset + base (theme-agnostic foundation)
 │   ├── theme-vibrant.css            # Vibrant theme tokens (Plus Jakarta Sans, Outfit)
 │   ├── theme-citrus.css             # Citrus theme tokens (Varela Round, Fredoka)
 │   ├── theme-business.css           # Business theme tokens (Manrope, Fira Code)
@@ -73,15 +71,17 @@ To create a new theme:
 
 ### For Production Projects
 
-**Recommended approach** (modular):
+**Recommended approach**:
 ```html
 <link rel="stylesheet" href="css/design-system-base.css">
 <link rel="stylesheet" href="css/theme-vibrant.css">
 ```
 
-**Legacy approach** (all-in-one):
-```html
-<link rel="stylesheet" href="css/design-system.css">
+**Alternative** (manual imports):
+```css
+@import url('./css/reset.css');
+@import url('./css/base.css');
+@import url('./css/theme-vibrant.css');
 ```
 
 ### Dynamic Theme Switching
