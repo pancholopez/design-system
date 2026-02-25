@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap');
 @import url('./reset.css');
 @import url('./base.css');
-@import url('./utilities.css');
 
 /**
  * Design System Showcase Styles (Theme-Agnostic)
