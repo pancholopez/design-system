@@ -142,7 +142,8 @@
     .type-example {
       margin-bottom: var(--spacing-4);
       padding: var(--spacing-6);
-      background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+      background: var(--color-bg-surface);
+      color: var(--color-text-primary);
       border-radius: var(--radius-lg);
       border: 1px solid var(--color-border-default);
       transition: all var(--transition-spring);
@@ -173,7 +174,8 @@
       align-items: center;
       gap: var(--spacing-4);
       padding: var(--spacing-3);
-      background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+      background: var(--color-bg-surface);
+      color: var(--color-text-primary);
       border-radius: var(--radius-md);
       border: 1px solid var(--color-border-default);
     }
@@ -201,7 +203,8 @@
     /* Component Examples */
     .component-example {
       padding: var(--spacing-8);
-      background: linear-gradient(135deg, #faf5ff 0%, #f3f4f6 100%);
+      background: var(--color-bg-surface);
+      color: var(--color-text-primary);
       border-radius: var(--radius-lg);
       margin-bottom: var(--spacing-6);
       border: 2px solid var(--color-border-default);

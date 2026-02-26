@@ -40,7 +40,8 @@ src/
 │   ├── theme-citrus.css             # Citrus theme tokens (Varela Round, Fredoka)
 │   ├── theme-business.css           # Business theme tokens (Manrope, Fira Code)
 │   ├── theme-electric-gelato.css    # Electric Gelato theme (Quicksand, Shrikhand)
-│   └── theme-mariner-parchment.css  # Mariner's Parchment (Libre Baskerville, Cinzel)
+│   ├── theme-mariner-parchment.css  # Mariner's Parchment (Libre Baskerville, Cinzel)
+│   └── theme-developer-night.css    # Developer Night dark theme (Inter, JetBrains Mono)
 ├── index.html                       # Landing page
 ├── design-system-guide.html         # Documentation
 └── theme-switcher.html              # Interactive theme demo
@@ -66,6 +67,12 @@ To create a new theme:
    ```
 
 **Important**: Do NOT modify structural tokens in theme files. Spacing, typography scale, border radius, and transitions belong in `base.css`.
+
+**Dark Theme Considerations**: 
+- When creating dark themes, ensure WCAG AA contrast ratios (4.5:1 for text, 3:1 for large text)
+- Consider consulting AI tools for accessibility validation
+- Repurpose low-contrast colors as borders or decorative elements instead of text
+- Use brighter colors for interactive elements and links
 
 ## Usage Patterns
 
@@ -127,6 +134,7 @@ document.getElementById('theme-css').href = 'css/theme-citrus.css';
 - If it's structural (e.g., a new spacing value), add it to `base.css`
 - Use existing CSS variables in showcase/documentation HTML instead of hardcoded values
 - Prefer reusing existing variables (like `--color-bg-hover`) over creating new ones
+- Showcase containers (`.type-example`, `.component-example`, `.spacing-item`) use `var(--color-bg-surface)` and `color: var(--color-text-primary)` — never hardcoded colors, or text becomes unreadable in dark themes
 
 ### When creating components:
 - Use CSS custom properties (tokens) rather than hardcoded values

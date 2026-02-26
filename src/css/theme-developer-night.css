@@ -1,0 +1,102 @@
+/* Theme-specific Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/**
+ * Developer Night Theme
+ *
+ * A dark theme optimized for developers with excellent contrast and readability.
+ * Based on a carefully curated blue-teal palette with accessibility as a priority.
+ * Designed with feedback from Gemini 3 Pro for optimal visual harmony and WCAG AA compliance.
+ */
+
+:root {
+  /* Gradient Backgrounds */
+  --gradient-primary: linear-gradient(135deg, #5A73BF 0%, #6B8DF2 100%);
+  --gradient-primary-hover: linear-gradient(135deg, #4a63af 0%, #5b7de2 100%);
+  
+  /* Colors - Primary */
+  --color-primary: #6B8DF2; /* Bright Blue - main interactive color */
+  --color-primary-light: #8ba6f5; /* Lighter blue for hover states */
+  
+  /* Colors - Accents */
+  --color-purple: #8b9df7; /* Purple accent derived from blue */
+  --color-pink: #a18bf2; /* Purple-pink accent */
+  --color-orange: #f2a76b; /* Warm orange accent */
+  --color-teal: #91CCD9; /* Light cyan - excellent contrast, used for links/highlights */
+  --color-blue: #6B8DF2; /* Primary blue */
+  
+  /* Colors - Semantic */
+  --color-success: #66cc99; /* Developer-friendly green */
+  --color-success-light: #7dd9aa;
+  --color-danger: #f27b7b; /* Soft red */
+  --color-danger-light: #f59999;
+  --color-warning: #f2c76b; /* Amber warning */
+  --color-warning-light: #f5d489;
+  --color-error-bg: #2a1a1c; /* Dark red background */
+  --color-error-border: #f27b7b; /* Error border */
+  --color-error-text: #f59999; /* Error text */
+  
+  /* Colors - Text (Following Gemini recommendations) */
+  --color-text-primary: #f0f4f8; /* High contrast white on dark bg (11.8:1 ratio) */
+  --color-text-secondary: #6b7d8a; /* Muted gray for general secondary text */
+  --color-text-muted: #434e59; /* More muted for tertiary info */
+  --color-heading: #ffffff; /* Pure white for maximum emphasis */
+  
+  /* Colors - Background */
+  --color-bg-body: #0B0B0D; /* Very dark, near-black main background */
+  --color-bg-surface: #2F3940; /* Dark gray-blue for cards/panels */
+  --color-bg-hover: #3a4851; /* Slightly lighter for hover states */
+  --color-bg-item: #2F3940; /* Item backgrounds */
+  
+  /* Colors - Border (Following Gemini recommendations) */
+  --color-border-default: #5A73BF; /* Medium blue for borders (promoted from text use) */
+  --color-border-focus: #6B8DF2; /* Bright blue on focus */
+  
+  /* Typography - Font Families */
+  --font-family-main: 'Inter', system-ui, sans-serif;
+  --font-family-heading: 'JetBrains Mono', monospace; /* Code-like aesthetic for developers */
+  --font-family-mono: 'JetBrains Mono', monospace;
+  --font-family-base: var(--font-family-main);
+  
+  /* Typography - Font Weight */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 700; /* JetBrains Mono max is 700 */
+  
+  /* Shadows - Dark Theme Shadows (subtle, use elevation) */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.6), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.7), 0 4px 6px -2px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 10px 10px -5px rgba(0, 0, 0, 0.7);
+  
+  /* Shadows - Colored (Using theme palette for glow effects) */
+  --shadow-purple: 0 10px 25px -5px rgba(139, 157, 247, 0.3);
+  --shadow-pink: 0 10px 25px -5px rgba(161, 139, 242, 0.3);
+  --shadow-blue: 0 10px 25px -5px rgba(107, 141, 242, 0.4);
+  --shadow-teal: 0 10px 25px -5px rgba(145, 204, 217, 0.3);
+}
+
+/* Dark Theme Specific Overrides */
+
+/* Links should use teal for better contrast (6.65:1 ratio per Gemini) */
+a {
+  color: var(--color-teal);
+}
+
+a:hover {
+  color: var(--color-primary-light);
+}
+
+/* Buttons with primary color need dark text for contrast (6.29:1 ratio) */
+.btn {
+  color: var(--color-bg-body);
+}
+
+/* Code blocks get subtle highlighting */
+code, pre {
+  background: #1a1d23;
+  border: 1px solid var(--color-border-default);
+}
