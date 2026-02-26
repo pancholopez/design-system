@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* 
+Theme: Noir Mono
+Description: A strict high-contrast dark theme for Obriy Design Büro, featuring brutalist typography and pure grayscale aesthetics.
+*/
+
+:root {
+  /* Gradient Backgrounds */
+  --gradient-primary: linear-gradient(135deg, #262626 0%, #0D0D0D 100%);
+  --gradient-primary-hover: linear-gradient(135deg, #404040 0%, #1a1a1a 100%);
+
+  /* Colors - Primary */
+  --color-primary: #F2F2F2;
+  --color-primary-light: #D9D9D9;
+
+  /* Colors - Accents (Mapped to grayscale palette) */
+  --color-purple: #D9D9D9;
+  --color-pink: #D9D9D9;
+  --color-orange: #8C8C8C;
+  --color-teal: #8C8C8C;
+  --color-blue: #D9D9D9;
+
+  /* Colors - Semantic (Muted/Desaturated for mono palette) */
+  --color-success: #5c7c64; /* Desaturated sage green */
+  --color-success-light: #7a9c82;
+  --color-danger: #8c4a4a; /* Desaturated brick red */
+  --color-danger-light: #a66363;
+  --color-warning: #8c754a; /* Desaturated bronze */
+  --color-warning-light: #a68d63;
+  --color-error-bg: #2a1515;
+  --color-error-border: #5c2b2b;
+  --color-error-text: #e0b0b0;
+
+  /* Colors - Text */
+  --color-text-primary: #F2F2F2;
+  --color-text-secondary: #D9D9D9;
+  --color-text-muted: #8C8C8C;
+  --color-heading: #F2F2F2;
+
+  /* Colors - Background */
+  --color-bg-body: #0D0D0D;
+  --color-bg-surface: #1a1a1a; /* Between 0D and 26 for depth */
+  --color-bg-hover: #262626;
+  --color-bg-item: #262626;
+
+  /* Colors - Border */
+  --color-border-default: #262626;
+  --color-border-focus: #8C8C8C;
+
+  /* Typography - Font Families */
+  --font-family-main: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-family-heading: 'Syne', sans-serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+  --font-family-base: var(--font-family-main);
+
+  /* Typography - Font Weight */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Shadows - Standard (high opacity for dark-on-dark elevation) */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.8);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.8), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.8), 0 4px 6px -2px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+
+  /* Shadows - Colored (Grayscale mapping) */
+  --shadow-purple: 0 4px 14px 0 rgba(217, 217, 217, 0.15);
+  --shadow-pink: 0 4px 14px 0 rgba(217, 217, 217, 0.15);
+  --shadow-blue: 0 4px 14px 0 rgba(140, 140, 140, 0.15);
+  --shadow-teal: 0 4px 14px 0 rgba(140, 140, 140, 0.15);
+}
+
+/* Dark theme overrides */
+
+/* Primary buttons use light background with near-black text for contrast */
+.btn-primary {
+  background: var(--color-primary);
+  color: #0D0D0D;
+  font-weight: var(--font-weight-bold);
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-light);
+  color: #0D0D0D;
+}
+
+/* Ensure code blocks have contrast */
+pre, code, kbd, samp {
+  background-color: #1a1a1a;
+  border: 1px solid #262626;
+}
+
+/* Select dropdowns: force text/bg so option list is readable on dark surfaces */
+select {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-hover);
+}
+
+select option {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-hover);
+}

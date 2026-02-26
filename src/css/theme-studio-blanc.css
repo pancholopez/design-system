@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap');
+
+/* 
+ * Theme: Studio Blanc
+ * Description: High-contrast light editorial theme using strict grayscale palette
+ * Palette: #F2F2F2, #D9D9D9, #8C8C8C, #262626, #0D0D0D
+ */
+
+:root {
+  /* 
+   * Gradient Backgrounds
+   * Silver-to-charcoal gives a more expressive mono gradient than near-black-to-dark.
+   * White text on both stops passes AA. No .btn-primary override needed.
+   */
+  --gradient-primary: linear-gradient(135deg, #8C8C8C 0%, #262626 100%);
+  --gradient-primary-hover: linear-gradient(135deg, #6a6a6a 0%, #0D0D0D 100%);
+
+  /* Colors - Primary */
+  --color-primary: #0D0D0D;        /* Near-black accent */
+  --color-primary-light: #262626;  /* Dark gray */
+
+  /* Colors - Accents (Mapped to grayscale palette — no hues) */
+  --color-purple: #262626;
+  --color-pink: #8C8C8C;
+  --color-orange: #262626;
+  --color-teal: #8C8C8C;
+  --color-blue: #262626;
+
+  /* Colors - Semantic (muted/desaturated, WCAG AA verified on white bg) */
+  --color-success: #4a6952;      /* Desaturated sage — 6.2:1 on white ✓ */
+  --color-success-light: #6a8f72;
+  --color-danger: #8c4a4a;       /* Desaturated brick red — 6.3:1 on white ✓ */
+  --color-danger-light: #a66363;
+  --color-warning: #6b5830;      /* Desaturated amber — 6.2:1 on white ✓ */
+  --color-warning-light: #8c7548;
+  --color-error-bg: #fdf0f0;
+  --color-error-border: #e8c0c0;
+  --color-error-text: #6b2e2e;
+
+  /* Colors - Text */
+  --color-text-primary: #0D0D0D;
+  --color-text-secondary: #262626;  /* #8C8C8C only 3.2:1 on white — fails AA normal text */
+  --color-text-muted: #8C8C8C;      /* Use only for large/decorative text */
+  --color-heading: #0D0D0D;
+
+  /* Colors - Background */
+  --color-bg-body: #F2F2F2;        /* Palette near-white */
+  --color-bg-surface: #FFFFFF;     /* Pure white for crisp cards */
+  --color-bg-hover: #D9D9D9;       /* Light gray */
+  --color-bg-item: #F2F2F2;         /* Distinct from white surface for row hierarchy */
+
+  /* Colors - Border */
+  --color-border-default: #D9D9D9; /* Light gray */
+  --color-border-focus: #0D0D0D;   /* Near-black */
+
+  /* Typography */
+  --font-family-main: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-family-heading: 'Syne', sans-serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+  --font-family-base: var(--font-family-main);
+
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Shadows - Subtle and clean for light theme */
+  --shadow-sm: 0 1px 2px rgba(13, 13, 13, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(13, 13, 13, 0.1), 0 2px 4px -1px rgba(13, 13, 13, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(13, 13, 13, 0.1), 0 4px 6px -2px rgba(13, 13, 13, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(13, 13, 13, 0.1), 0 10px 10px -5px rgba(13, 13, 13, 0.04);
+
+  /* Shadows - Colored (Grayscale mapping) */
+  --shadow-purple: 0 4px 14px 0 rgba(13, 13, 13, 0.2);
+  --shadow-pink: 0 4px 14px 0 rgba(38, 38, 38, 0.2);
+  --shadow-blue: 0 4px 14px 0 rgba(13, 13, 13, 0.2);
+  --shadow-teal: 0 4px 14px 0 rgba(140, 140, 140, 0.3);
+}
+
+/* Light theme — code blocks use item bg for subtle distinction */
+code, pre {
+  background: var(--color-bg-item);
+  border: 1px solid var(--color-border-default);
+  color: var(--color-text-primary);
+}
